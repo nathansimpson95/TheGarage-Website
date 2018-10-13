@@ -3,20 +3,9 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
-import logo from "../images/logo.svg"
-
-
-const Hero = () => (
-  <div>
-    <img src={logo} alt="Logo" />
-    <h1>Love Cars? Join the Club</h1>
-    <p style={{textsize:'0.3em'}}>
-      The Garage is for all of Sydney’s Car Enthusiasts, no matter what you’re
-      into. Japanese, Australian, Offroad, Racing, everyone is welcome!
-    </p>
-    <a href="#earlyaccess">Get Early Access</a>
-  </div>
-)
+import Hero from '../components/hero'
+import Form from '../components/form'
+import Footer from '../components/footer'
 
 // content = [
 //   {
@@ -54,20 +43,17 @@ const Hero = () => (
 // )
 
 const IndexPage = () => (
-  <Layout>
+  <div>
     <Hero />
-    <h1>Hi Nathan</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-    <form id="earlyaccess">
-      <label for="name">Name</label>
-      <input type="text" name="name"/>
-      <label for="email">Email</label>
-      <input type="email" name="email"/>
-      <input type="submit" name="submit" label="submit"/>
-    </form>
-  </Layout>
+    <Layout>
+      <h1>Hi Nathan</h1>
+      <p>Welcome to your new Gatsby site.</p>
+      <p>Now go build something great.</p>
+      <Link to="/page-2/">Go to page 2</Link>
+    </Layout>
+    <Form />
+    <Footer />
+  </div>
 )
 
 export default IndexPage

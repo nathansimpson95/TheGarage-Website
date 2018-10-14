@@ -44,6 +44,7 @@ const Form = () => (
       name="earlyaccess"
       method="POST"
       data-netlify="true"
+      data-netlify-honeypot="bot-field"
       style={{
         margin: '0 auto',
         maxWidth: 500,
@@ -67,6 +68,8 @@ const Form = () => (
         <input type="city" name="email" style={formstyles.input}/>
       </div>
 
+      <input type="hidden" name="form-name" value="earlyaccess" />
+      
       <input type="submit" name="submit" label="submit" style={formstyles.button}/>
     </form>
   </div>

@@ -43,7 +43,7 @@ const Form = () => (
       id="earlyaccess"
       name="earlyaccess"
       method="post"
-      netlify
+      netlify="true"
       style={{
         margin: '0 auto',
         maxWidth: 500,

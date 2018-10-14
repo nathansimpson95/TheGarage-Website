@@ -18,7 +18,8 @@ const formstyles = {
   },
   label: {
     fontWeight: '600',
-    textAlign: 'left'
+    textAlign: 'left',
+    fontSize: '0.8em',
   },
   group: {
     marginBottom: '5px',
@@ -37,9 +38,12 @@ const Form = () => (
     }}
   >
       <h2>Register for early access</h2>
-      <p style={{maxWidth: 500}}>Enter your email address below for an early invlte, and be among the  first to join The Garage.</p>
+      <p style={{maxWidth: 500}}>Enter your email address below for an early invite, and be among the first to join The Garage.</p>
     <form
       id="earlyaccess"
+      name="earlyaccess"
+      method="post"
+      netlify
       style={{
         margin: '0 auto',
         maxWidth: 500,
@@ -56,6 +60,11 @@ const Form = () => (
       <div style={formstyles.group}>
         <label for="email" style={formstyles.label}>Email</label>
         <input type="email" name="email" style={formstyles.input}/>
+      </div>
+
+      <div style={formstyles.group}>
+        <label for="city" style={formstyles.label}>City</label>
+        <input type="city" name="email" style={formstyles.input}/>
       </div>
 
       <input type="submit" name="submit" label="submit" style={formstyles.button}/>

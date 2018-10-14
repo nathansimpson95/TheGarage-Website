@@ -42,7 +42,7 @@ const Form = () => (
     <form
       id="earlyaccess"
       name="earlyaccess"
-      method="post"
+      method="POST"
       data-netlify="true"
       style={{
         margin: '0 auto',

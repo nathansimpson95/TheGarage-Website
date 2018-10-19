@@ -16,6 +16,13 @@ module.exports = {
         icon: 'src/images/theGarage-symbol.png', // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-127798688-1",
+        head: true,
+      },
+    },
     'gatsby-plugin-offline',
   ],
 }

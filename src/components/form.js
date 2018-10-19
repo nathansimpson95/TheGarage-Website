@@ -40,10 +40,10 @@ const Form = () => (
       <h2>Register for early access</h2>
       <p style={{maxWidth: 500}}>Enter your email address below for an early invite, and be among the first to join The Garage.</p>
     <form
-      id="earlyaccess"
       name="earlyaccess"
       method="POST"
       data-netlify="true"
+      netlify="true"
       data-netlify-honeypot="bot-field"
       style={{
         margin: '0 auto',
@@ -52,19 +52,20 @@ const Form = () => (
         paddingTop: 0,
         textAlign: 'left'
       }}
+      id="earlyaccess"
     >
       <div style={formstyles.group}>
-        <label for="name" style={formstyles.label}>Name</label>
+        <label htmlFor="name" style={formstyles.label}>Name</label>
         <input type="text" name="name" style={formstyles.input}/>
       </div>
 
       <div style={formstyles.group}>
-        <label for="email" style={formstyles.label}>Email</label>
+        <label htmlFor="email" style={formstyles.label}>Email</label>
         <input type="email" name="email" style={formstyles.input}/>
       </div>
 
       <div style={formstyles.group}>
-        <label for="city" style={formstyles.label}>City</label>
+        <label htmlFor="city" style={formstyles.label}>City</label>
         <input type="city" name="email" style={formstyles.input}/>
       </div>
 

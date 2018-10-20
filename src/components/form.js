@@ -45,7 +45,7 @@ const Form = () => (
       data-netlify="true"
       netlify="true"
       data-netlify-honeypot="bot-field"
-      action="/page-2"
+      action="/thankyou"
       style={{
         margin: '0 auto',
         maxWidth: 500,

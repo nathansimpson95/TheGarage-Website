@@ -41,13 +41,17 @@ const Row = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: ${props => props.data.left ? 'row' : 'row-reverse'};
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
   
   
 const RowText = styled.div`
   flex: 1;
   display: flex;
-  padding: 20px;
+  padding: 40px;
   box-sizing: border-box;
   align-items: center;
 `;

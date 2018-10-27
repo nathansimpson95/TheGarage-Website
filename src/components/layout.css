@@ -1,5 +1,5 @@
 html {
-  font-family: 'montserrat' sans-serif;
+  font-family: 'montserrat', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -201,7 +201,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  font-family: montserrat, serif;
+  font-family: 'montserrat', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;

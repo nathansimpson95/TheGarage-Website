@@ -24,6 +24,8 @@ const Submit = styled.input`
   padding: 5px 20px;
   text-decoration: none;
   font-weight: 700;
+  transition: all 0.5s ease-in-out;
+  border-radius: 6px;
 
   &:hover{
     background: white;

@@ -9,34 +9,38 @@ import Form from '../components/form'
 import Footer from '../components/footer'
 
 
-import iphoneDemo from '../images/iphone-demo.png'
+import imageDashboard from '../images/explore-crop.png'
+import imageProjects from '../images/projects-crop.png'
+import imageWorkshop from '../images/workshop-crop.png'
+import imageEvents from '../images/event-crop.png'
+import eventCanopy from '../images/eventCanopy.png'
 
 const content = [
   {
     heading: 'For All of Sydney’s Car Enthusiasts',
     content: 'The Garage is the digital extension of Sydney’s car culture. Japanese, Offroad, Racing, whatever your passion, you will find people, projects and events that will interest you. The Garage was designed in Sydney, for Sydney.',
-    black: true,
-    image: iphoneDemo,
+    image: imageDashboard,
     left: true,
   },{
     heading: 'Showcase your ride',
     content: 'Create a profile for each of your cars, and share your build progress, photos, and questions with your audience. People can follow you to see more and engage with your content.',
-    image: iphoneDemo,
+    black: true,
+    image: imageProjects,
   },{
     heading: 'Work on cars with others',
     content: 'Workshops allow you work on cars with others. Want to learn new skills from experienced users? Have ambitious plans for your car and need a few extra hands? Workshops will let you get more done while making new friends along the way.',
-    black: true,
-    image: iphoneDemo,
+    image: imageWorkshop,
     left: true,
   },{
-    heading: 'More than a Social Network',
-    content: 'hi',
-    image: iphoneDemo,
+    heading: 'The hottest events',
+    content: 'Be the first to know about all the must-see events for car lovers in Sydney.',
+    black: true,
+    image: imageEvents,
   },
 ]
 
 
-const Row = styled.div`
+const FeatureRow = styled.div`
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
@@ -64,7 +68,7 @@ const ContentRow = block => (
         background: block.data.black ? '#080808' : 'none',
       }}
   >
-    <Row data={block.data}>
+    <FeatureRow data={block.data}>
       {console.log(block.data)}
       <RowText>
         <div>
@@ -81,7 +85,7 @@ const ContentRow = block => (
       }}>
         <img style={{margin: '20px 0 0 0', padding: 0}} src={block.data.image}/>
       </div>
-    </Row>
+    </FeatureRow>
   </section>
 )
 
@@ -93,6 +97,7 @@ const IndexPage = () => (
         <ContentRow data={data}/>
       )}
     </div>
+
     <Form />
     <Footer />
   </div>

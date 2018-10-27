@@ -27,6 +27,7 @@ const EarlyAccess = styled.a`
   padding: 10px 20px;
   text-decoration: none;
   font-weight: 700;
+  transition: all 0.5s ease-in-out;
 
   &:hover{
     background: white;

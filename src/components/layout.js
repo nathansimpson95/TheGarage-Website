@@ -26,7 +26,6 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
-          <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"></link>
         </Helmet>
         <div
           style={{

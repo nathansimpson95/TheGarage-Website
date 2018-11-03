@@ -69,7 +69,6 @@ const ContentRow = block => (
       }}
   >
     <FeatureRow data={block.data}>
-      {console.log(block.data)}
       <RowText>
         <div>
           <h2>{block.data.heading}</h2>

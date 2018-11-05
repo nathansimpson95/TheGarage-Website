@@ -74,7 +74,7 @@ const Form = () => (
 
       <div style={{marginBottom: '5px'}}>
         <label htmlFor="city" style={formstyles.label}>City</label>
-        <input type="city" name="email" style={formstyles.input}/>
+        <input type="text" name="city" style={formstyles.input}/>
       </div>
 
       <input type="hidden" name="form-name" value="earlyaccess" />

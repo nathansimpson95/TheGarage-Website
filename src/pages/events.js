@@ -67,7 +67,7 @@ const EventCard = ({ event }) => (
       display: 'block',
       textDecoration: 'none',
       padding: 12,
-      background: '#343538',
+      background: '#262831',
       borderRadius: 6,
       boxShadow: '0 16px 16px rgba(0,0,0,0.3)',
     }}
@@ -79,18 +79,12 @@ const EventCard = ({ event }) => (
       css={{
         margin: 0,
         fontSize: '0.8em',
-      }}
-    >
-      {event.location}, {format(event.date, 'Do MMM HH:MM A')}
-    </p>
-    {/* <p
-      css={{
-        margin: 0,
-        fontSize: '0.8em',
         color: '#cbcbcb',
       }}
     >
-      {event.body}
-    </p> */}
+      {event.location}
+      <br />
+      {format(event.date, 'Do MMM HH:MM A')}
+    </p>
   </a>
 )

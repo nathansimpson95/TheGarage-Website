@@ -1,9 +1,9 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
+import styled from '@emotion/styled'
+
 import logo from '../images/logo.svg'
 import herobg from '../images/herobg.jpg'
-import styled from "styled-components"
-
-
 const heroStyles = {
   section: {
     background: '#222',
@@ -29,24 +29,30 @@ const EarlyAccess = styled.a`
   font-weight: 700;
   transition: all 0.5s ease-in-out;
 
-  &:hover{
+  &:hover {
     background: white;
     color: red;
   }
-`;
+`
 
 const Hero = () => (
-  <div style={heroStyles.section}>
-    <div style={{
-          maxWidth: 550
-      }}>
-      <img src={logo} style={{maxWidth: 270, alignSelf: 'flex-start'}} alt="The Garage" />
-      <h1 style={{ fontSize: '4em' }}>
+  <div css={heroStyles.section}>
+    <div
+      css={{
+        maxWidth: 550,
+      }}
+    >
+      <img
+        src={logo}
+        css={{ maxWidth: 270, alignSelf: 'flex-start' }}
+        alt="The Garage"
+      />
+      <h1 css={{ fontSize: '4em' }}>
         Love Cars?
         <br />
         Join the Club
       </h1>
-      <p style={{ fontSize: '1em' }}>
+      <p css={{ fontSize: '1em' }}>
         The Garage is for all of Sydney’s Car Enthusiasts, no matter what you’re
         into. Japanese, Australian, Offroad, Racing, everyone is welcome!
       </p>

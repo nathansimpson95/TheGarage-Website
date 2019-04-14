@@ -1,13 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
 
 import logo from '../images/logo.svg'
 
 export default () => (
-  <header style={{ margin: '10px 0' }}>
+  <header css={{ margin: '10px 0' }}>
     <img
       src={logo}
-      style={{ width: '40%', maxWidth: 200, margin: 0 }}
+      css={{ width: '40%', maxWidth: 200, margin: 0 }}
       alt="The Garage"
     />
   </header>

@@ -1,51 +1,23 @@
-import React from 'react'
-import styled from "styled-components"
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
+import styled from '@emotion/styled'
 
-const formstyles = {
-  input: {
-    background: "#1A1B1F",
-    border: 'none',
-    borderRadius: '6px',
-    width: '100%',
-    color: 'white',
-    padding: '5px 10px'
-  },
-  label: {
-    fontWeight: '600',
-    textAlign: 'left',
-    fontSize: '0.8em',
-  },
-}
-
-const Submit = styled.input`
-  background: red;
-  border: none;
-  color: white;
-  padding: 5px 20px;
-  text-decoration: none;
-  font-weight: 700;
-  transition: all 0.5s ease-in-out;
-  border-radius: 6px;
-
-  &:hover{
-    background: white;
-    color: red;
-  }
-`;
-
-const Form = () => (
+export default () => (
   <div
-    style={{
+    css={{
       background: '#000000',
       display: 'flex',
       alignItems: 'center',
       flexDirection: 'column',
       textAlign: 'center',
-      padding: '4em'
+      padding: '4em',
     }}
   >
-      <h2>Register for early access</h2>
-      <p style={{maxWidth: 500}}>Enter your email address below for an early invite, and be among the first to join The Garage.</p>
+    <h2>Register for early access</h2>
+    <p css={{ maxWidth: 500 }}>
+      Enter your email address below for an early invite, and be among the first
+      to join The Garage.
+    </p>
     <form
       name="earlyaccess"
       method="POST"
@@ -53,35 +25,64 @@ const Form = () => (
       netlify="true"
       data-netlify-honeypot="bot-field"
       action="/thankyou"
-      style={{
+      css={{
         margin: '0 auto',
         maxWidth: 500,
         padding: '0px 1.0875rem 1.45rem',
         paddingTop: 0,
-        textAlign: 'left'
+        textAlign: 'left',
       }}
       id="earlyaccess"
     >
-      <div style={{marginBottom: '5px'}}>
-        <label htmlFor="name" style={formstyles.label}>Name</label>
-        <input type="text" name="name" style={formstyles.input}/>
+      <div css={{ marginBottom: '5px' }}>
+        <Label htmlFor="name">Name</Label>
+        <Input type="text" name="name" />
       </div>
 
-      <div style={{marginBottom: '5px'}}>
-        <label htmlFor="email" style={formstyles.label}>Email</label>
-        <input type="email" name="email" style={formstyles.input}/>
+      <div css={{ marginBottom: '5px' }}>
+        <Label htmlFor="email">Email</Label>
+        <Input type="email" name="email" />
       </div>
 
-      <div style={{marginBottom: '5px'}}>
-        <label htmlFor="city" style={formstyles.label}>City</label>
-        <input type="text" name="city" style={formstyles.input}/>
+      <div css={{ marginBottom: '5px' }}>
+        <Label htmlFor="city">City</Label>
+        <Input type="text" name="city" />
       </div>
 
       <input type="hidden" name="form-name" value="earlyaccess" />
-      
-      <Submit type="submit" name="submit" label="submit"/>
+
+      <Submit type="submit" name="submit" label="submit" />
     </form>
   </div>
 )
 
-export default Form
+const Input = styled.input({
+  background: '#1A1B1F',
+  border: 'none',
+  borderRadius: '6px',
+  width: '100%',
+  color: 'white',
+  padding: '5px 10px',
+})
+
+const Label = styled.label({
+  fontWeight: '600',
+  textAlign: 'left',
+  fontSize: '0.8em',
+})
+
+const Submit = styled.input({
+  background: 'red',
+  border: 'none',
+  color: 'white',
+  padding: '5px 20px',
+  textDecoration: 'none',
+  fontWeight: '700',
+  transition: 'all 0.5s ease-in-out',
+  borderRadius: 6,
+
+  '&:hover': {
+    background: 'white',
+    color: 'red',
+  },
+})

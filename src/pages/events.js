@@ -1,8 +1,5 @@
-import React from 'react'
-
-import styled from 'styled-components'
-
-import { Link } from 'gatsby'
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
 
 import Layout from '../components/layout'
 import Header from '../components/header'
@@ -25,7 +22,7 @@ export default () => (
       <Layout>
         <Header />
 
-        <h1 style={{ fontSize: '1.4em' }}>Upcoming Events</h1>
+        <h1 css={{ fontSize: '1.4em' }}>Upcoming Events</h1>
         <Query
           query={gql`
             {
@@ -60,7 +57,7 @@ export default () => (
 const EventCard = ({ event }) => (
   <a
     href={event.url}
-    style={{
+    css={{
       marginBottom: '1em',
       color: 'white',
       display: 'block',
@@ -71,11 +68,11 @@ const EventCard = ({ event }) => (
       boxShadow: '0 16px 16px rgba(0,0,0,0.3)',
     }}
   >
-    <h2 style={{ fontSize: '1em', marginBottom: 6, color: 'white' }}>
+    <h2 css={{ fontSize: '1em', marginBottom: 6, color: 'white' }}>
       {event.title}
     </h2>
     <p
-      style={{
+      css={{
         margin: 0,
         fontSize: '0.8em',
       }}
@@ -83,7 +80,7 @@ const EventCard = ({ event }) => (
       {event.location}, {format(event.date, 'Do MMM HH:MM A')}
     </p>
     {/* <p
-      style={{
+      css={{
         margin: 0,
         fontSize: '0.8em',
         color: '#cbcbcb',

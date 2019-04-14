@@ -1,19 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-
-const NSGD = styled.a`
-  color: #fff;
-  text-decoration: none;
-
-  &:hover {
-    color: #fa6d01;
-    text-decoration: underline;
-  }
-`
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
 
 const Footer = () => (
   <footer
-    style={{
+    css={{
       textAlign: 'center',
       padding: '6px',
       fontSize: '0.8em',
@@ -21,7 +11,21 @@ const Footer = () => (
     }}
   >
     &copy; Copyright 2019. A project by{' '}
-    <NSGD href="http://nathansimpson.design">Nathan Simpson</NSGD>.
+    <a
+      css={{
+        color: '#fff',
+        textDecoration: 'none',
+
+        '&:hover': {
+          color: '#fa6d01',
+          textDecoration: 'underline',
+        },
+      }}
+      href="http://nathansimpson.design"
+    >
+      Nathan Simpson
+    </a>
+    .
   </footer>
 )
 

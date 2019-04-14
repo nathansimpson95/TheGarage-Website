@@ -1,15 +1,15 @@
 import React from 'react'
-import styled from "styled-components"
+import styled from 'styled-components'
 
 const NSGD = styled.a`
   color: #fff;
   text-decoration: none;
 
   &:hover {
-    color: #FA6D01;
+    color: #fa6d01;
     text-decoration: underline;
   }
-`;
+`
 
 const Footer = () => (
   <footer
@@ -17,10 +17,11 @@ const Footer = () => (
       textAlign: 'center',
       padding: '6px',
       fontSize: '0.8em',
-      background: '#0D0E10'
+      background: '#0D0E10',
     }}
   >
-    &copy; Copyright 2018. A project by <NSGD href="http://nathansimpson.design">Nathan Simpson</NSGD>.
+    &copy; Copyright 2019. A project by{' '}
+    <NSGD href="http://nathansimpson.design">Nathan Simpson</NSGD>.
   </footer>
 )
 

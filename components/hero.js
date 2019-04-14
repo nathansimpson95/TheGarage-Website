@@ -2,12 +2,10 @@
 import { jsx } from '@emotion/core'
 import styled from '@emotion/styled'
 
-import logo from '../images/logo.svg'
-import herobg from '../images/herobg.jpg'
 const heroStyles = {
   section: {
     background: '#222',
-    backgroundImage: `url(${herobg})`,
+    backgroundImage: `url(../static/herobg.jpg)`,
     backgroundSize: 'cover',
     backgroundRepeat: 'noRepeat',
     backgroundPosition: 'center',
@@ -43,7 +41,7 @@ const Hero = () => (
       }}
     >
       <img
-        src={logo}
+        src="../static/logo.svg"
         css={{ maxWidth: 270, alignSelf: 'flex-start' }}
         alt="The Garage"
       />

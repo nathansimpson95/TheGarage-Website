@@ -12,10 +12,13 @@ import { ApolloProvider, Query } from 'react-apollo'
 import ApolloClient from 'apollo-boost'
 import gql from 'graphql-tag'
 
+import fetch from 'isomorphic-fetch'
+
 import { format } from 'date-fns'
 
 const client = new ApolloClient({
   uri: 'https://thegarage-api.herokuapp.com/admin/api',
+  fetch,
 })
 
 export default () => (

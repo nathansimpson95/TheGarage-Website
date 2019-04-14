@@ -60,15 +60,22 @@ const Input = styled.input({
   background: '#1A1B1F',
   border: 'none',
   borderRadius: '6px',
-  width: '100%',
   color: 'white',
+  fontSize: '1.25em',
   padding: '5px 10px',
+  width: '100%',
+
+  '&:focus': {
+    outline: 'none',
+  },
 })
 
 const Label = styled.label({
   fontWeight: '600',
   textAlign: 'left',
   fontSize: '0.8em',
+  display: 'block',
+  marginBottom: 6,
 })
 
 const Submit = styled.input({

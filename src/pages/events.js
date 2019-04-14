@@ -1,9 +1,11 @@
 /** @jsx jsx */
+import React from 'react'
 import { jsx } from '@emotion/core'
 
-import Layout from '../components/layout'
+import Theme from '../components/theme'
 import Header from '../components/header'
 import Footer from '../components/footer'
+import Container from '../components/container'
 
 //graphQL config
 import { ApolloProvider, Query } from 'react-apollo'
@@ -18,39 +20,41 @@ const client = new ApolloClient({
 
 export default () => (
   <ApolloProvider client={client}>
-    <>
-      <Layout>
-        <Header />
+    <Container>
+      <>
+        <Theme>
+          <Header />
 
-        <h1 css={{ fontSize: '1.4em' }}>Upcoming Events</h1>
-        <Query
-          query={gql`
-            {
-              allEvents {
-                id
-                title
-                location
-                body
-                url
-                date
+          <h1 css={{ fontSize: '1.4em', marginTop: 70 }}>Upcoming Events</h1>
+          <Query
+            query={gql`
+              {
+                allEvents {
+                  id
+                  title
+                  location
+                  body
+                  url
+                  date
+                }
               }
-            }
-          `}
-        >
-          {({ loading, error, data }) => {
-            if (loading) return <p>Loading...</p>
-            if (error) return <p>Error :(</p>
+            `}
+          >
+            {({ loading, error, data }) => {
+              if (loading) return <p>Loading...</p>
+              if (error) return <p>Error :(</p>
 
-            console.log(data)
+              console.log(data)
 
-            return data.allEvents.map(event => (
-              <EventCard event={event} key={event.id} />
-            ))
-          }}
-        </Query>
-      </Layout>
-      <Footer />
-    </>
+              return data.allEvents.map(event => (
+                <EventCard event={event} key={event.id} />
+              ))
+            }}
+          </Query>
+        </Theme>
+      </>
+    </Container>
+    <Footer />
   </ApolloProvider>
 )
 

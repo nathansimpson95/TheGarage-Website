@@ -5,9 +5,8 @@ const Footer = () => (
   <footer
     css={{
       textAlign: 'center',
-      padding: '6px',
+      padding: 12,
       fontSize: '0.8em',
-      background: '#0D0E10',
     }}
   >
     &copy; Copyright 2019. A project by{' '}
